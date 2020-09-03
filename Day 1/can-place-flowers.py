@@ -18,8 +18,7 @@
 '''
 
 class Solution:
-    def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
-        possible = 0
+    def canPlaceFlowers(self, flowerbed: , n: int) -> bool:
         if len(flowerbed) == 1:
             if flowerbed[0]==0 and n<=1:
                 return True
