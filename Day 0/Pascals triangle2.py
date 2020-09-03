@@ -33,7 +33,7 @@
 
 
 class Solution:
-    def getRow(self, rowIndex: int) -> List[int]:
+    def getRow(self, rowIndex: int):
         
         if rowIndex == 0:
             return [1]
