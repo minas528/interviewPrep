@@ -35,7 +35,7 @@
 '''
 # Solution One bruet force
 class Solution:
-    def countNegatives(self, grid: List[List[int]]) -> int:
+    def countNegatives(self, grid) -> int:
         counter = 0
         for i in range(len(grid)):
             for j in range(len(grid[0])-1,-1,-1):
@@ -47,9 +47,9 @@ class Solution:
 
 
 
-#Solution Tw0 O(mlog(n))
-class Solution:
-    def countNegatives(self, grid: List[List[int]]) -> int:
+# Solution Tw0 O(mlog(n))
+class Solution2:
+    def countNegatives(self, grid) -> int:
         def bin(row):
                 start, end = 0, len(row)
                 while start<end:
