@@ -23,7 +23,7 @@
 ##  Sol - one QuickSort
 
 class Solution:
-    def sortArray(self, nums: List[int]) -> List[int]:
+    def sortArray(self, nums) :
         def QuickSort(nums, start, end):
             if start >= end:
                 return
