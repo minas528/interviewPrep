@@ -42,8 +42,20 @@ class Solution:
         QuickSort(nums,0, len(nums)-1)            
         return nums
 
+## Sol 2 = Counting sort
+class Solution2:
+    def sortArray(self, nums) :
+        count = [0]*100000
+        for num in nums:
+            count[num+50000] += 1 # count the number of times we see the number
+        nums = []
+        for i,counter in enumerate(count):
+            for _ in range(counter):
+                nums.append(i-50000) # this line runs at most n times total
+        return nums
 
-## Sol 2 = MergeSort
+
+## Sol 3 = MergeSort
 def MergeSort(arr):
     if len(arr) == 1:
         return arr
@@ -71,7 +83,8 @@ def merge(left, right):
 if __name__ == "__main__":
     arr = [29, 64, 73, 34, 20]
     arr2 = [7, 5, 2, 4, 3, 9]
-    res = MergeSort(arr2)
+    sol = Solution2()
+    res = sol.sortArray(arr2)
     print(res)
 
 
